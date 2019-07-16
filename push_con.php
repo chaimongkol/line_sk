@@ -28,5 +28,4 @@ $mytime = date("H:i");
                  
         echo "Send Line  OK---<br/>";
 
-        }
-?>
+      ?>
