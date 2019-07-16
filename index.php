@@ -6,7 +6,7 @@ $mytime = date("H:i");
 	
 		$userId = "ldAxAPwRhs4oZf6cPWEqKqEsqDL8tjg4lrTzWuS0fVR";
                 //   C2048a27bf88cc4a85dcd1b7feb0406e5";
-                $strAccessToken = "8Lg+b3u0aF0TiheDr/QcHGTl8dUs/WyJ3mTWXHOXWzoWLwiE9qafKtnHGkfOZqDT/91i3Vb5zrx9SCDfe1th/Ad6bfbmxgY+RLCpURlW4S/2kLJFZCcINptLYSZUufA6wGDfAduIgzXBC4hQS1SZlgdB04t89/1O/w1cDnyilFU=";
+                $strAccessToken = "itXcJm7M2Tt9pwhO4+yooh8C2zjvnuqwPbWhAFvD2nfBYlL5Iq/hByHS7+1pXWw+buN1FqqiSnh+Nx4mx4OITNr8bTXIjFGrbB9bUtnCYH+zBzX7XnijnBTSkZ+W6bDb9GUoM3gM/wdPpLBvhtXTcQdB04t89/1O/w1cDnyilFU=";
                 $txt = $txt = "ขอบคุณ ";
                 $txt1 = $txt."\r\n Update ข้อมูล \r\n http://10.242.1.50/sk/sk_plan.php";
                 $strUrl = "https://api.line.me/v2/bot/message/push";
