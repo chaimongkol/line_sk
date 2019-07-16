@@ -1,4 +1,3 @@
-
 <?php
 $access_token = 'itXcJm7M2Tt9pwhO4+yooh8C2zjvnuqwPbWhAFvD2nfBYlL5Iq/hByHS7+1pXWw+buN1FqqiSnh+Nx4mx4OITNr8bTXIjFGrbB9bUtnCYH+zBzX7XnijnBTSkZ+W6bDb9GUoM3gM/wdPpLBvhtXTcQdB04t89/1O/w1cDnyilFU=';
 
@@ -15,9 +14,10 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
-			//$replyToken = $event['replyToken'];
-			$replyToken = 'U5e103b05336235f61c6b2ecb9384726e';
-			$luserid= $event['source']['groupId'];
+			$replyToken = $event['replyToken'];
+			$luserid = $event['source']['userId'];
+			$lgroupid = $event['source']['groupId'];
+			//$luserid= $event['userId'];
 
 			// Build message to reply back
 //			$messages = [
@@ -27,7 +27,7 @@ if (!is_null($events['events'])) {
 
 			$messages = [
 				'type' => 'text',
-				'text' => '-replyToken->'.$replyToken.'<-userid-->>>'.$content
+				'text' => '<Join Group>='.$lgroupid
 			];
 
 
