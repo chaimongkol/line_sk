@@ -1,10 +1,10 @@
 <?php
-$accessToken = "tXcJm7M2Tt9pwhO4+yooh8C2zjvnuqwPbWhAFvD2nfBYlL5Iq/hByHS7+1pXWw+buN1FqqiSnh+Nx4mx4OITNr8bTXIjFGrbB9bUtnCYH+zBzX7XnijnBTSkZ+W6bDb9GUoM3gM/wdPpLBvhtXTcQdB04t89/1O/w1cDnyilFU=";
-$content = file_get_contents('php://input');
+	$accessToken = "tXcJm7M2Tt9pwhO4+yooh8C2zjvnuqwPbWhAFvD2nfBYlL5Iq/hByHS7+1pXWw+buN1FqqiSnh+Nx4mx4OITNr8bTXIjFGrbB9bUtnCYH+zBzX7XnijnBTSkZ+W6bDb9GUoM3gM/wdPpLBvhtXTcQdB04t89/1O/w1cDnyilFU=";
+	$content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
    $arrayHeader = array();
    $arrayHeader[] = "Content-Type: application/json";
-   $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+   $arrayHeader[] = "Authorization: Bearer {".$accessToken."}";
 //รับข้อความจากผู้ใช้
    $message = $arrayJson['events'][0]['message']['text'];
 //รับ id ว่ามาจากไหน
@@ -14,10 +14,10 @@ $content = file_get_contents('php://input');
    else if(isset($arrayJson['events'][0]['source']['groupId'])){
       $id = $arrayJson['events'][0]['source']['groupId'];
    }
-   else if(isset($arrayJson['events'][0]['source']['room'])){
+   else (isset($arrayJson['events'][0]['source']['room'])){
       $id = $arrayJson['events'][0]['source']['room'];
    }
-//#ตัวอย่าง Message Type "Text + Sticker"
+//ตัวอย่าง Message Type "Text + Sticker"
    if($message == "สวัสดี"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
